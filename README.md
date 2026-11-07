@@ -30,9 +30,9 @@ A failure is a missing or non-finite estimate, or an absolute error **above 5 bp
 
 ## Key evidence
 
-<img src="assets/external_evaluation.png" align="right" width="46%" alt="Interval plots of confidence-minus-quality differences in the additional VitalDB cohort for five configurations: within-rhythm failure differences for AF/AFL and NSR, and global reliable-output differences for AF/AFL and overall at 92.73% and 87.93% retention.">
+<img src="assets/external_evaluation.png" align="right" width="400" alt="Interval plots of confidence-minus-quality differences in the additional VitalDB cohort for five configurations: within-rhythm failure differences for AF/AFL and NSR, and global reliable-output differences for AF/AFL and overall at 92.73% and 87.93% retention.">
 
-The additional VitalDB cohort included **352 patients**. Rules for the original confidence-versus-quality comparison were frozen before waveform retrieval.
+The additional VitalDB cohort included **352 patients**. Rules for the original comparison were frozen before waveform&nbsp;retrieval.
 
 **Within rhythms (panel a).** Confidence ranking lowered retained AF/AFL failure at matched counts in all five configurations. The H2-R interval included zero.
 

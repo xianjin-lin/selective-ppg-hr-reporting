@@ -20,53 +20,62 @@
 
 Selective reporting is assessed along three distinct quantities:
 
-| Quantity | Question answered |
+| Quantity | What it measures |
 |---|---|
-| **Retained failure** | How often do the reported estimates fail the error tolerance? |
-| **Rhythm-specific coverage** | What fraction of a rhythm's eligible windows is reported? |
-| **Reliable-output yield** | How many reported estimates are non-failing, within a rhythm or overall? |
+| Retained failure | Failure rate among reported estimates |
+| Rhythm-specific coverage | Fraction of eligible windows reported, by rhythm |
+| Reliable-output yield | Non-failing outputs retained, by rhythm or overall |
 
 A failure is a missing or non-finite estimate, or an absolute error **above 5 bpm** against the ECG-derived reference; exactly 5 bpm is not a failure. Reference eligibility is applied separately. Matched-count selection within a rhythm measures accuracy; global ranking against one budget measures allocation.
 
 ## Key evidence
 
-<img src="assets/external_evaluation.png" align="right" width="46%" alt="Interval plots of confidence-minus-quality differences in the additional VitalDB cohort for five configurations: within-rhythm failure differences for AF/AFL and NSR, and global reliable-output differences for AF/AFL and overall at 92.73% and 87.93% retention.">
+<img src="assets/external_evaluation.png" align="right" width="400" alt="Interval plots of confidence-minus-quality differences in the additional VitalDB cohort for five configurations: within-rhythm failure differences for AF/AFL and NSR, and global reliable-output differences for AF/AFL and overall at 92.73% and 87.93% retention.">
 
-The additional VitalDB cohort (352 patients) evaluated the original confidence-versus-quality comparison under analysis rules frozen before waveform retrieval.
+The additional VitalDB cohort included **352 patients**. Rules for the original comparison were frozen before waveform&nbsp;retrieval.
 
-**Within rhythms (panel a).** At matched counts, confidence ranking had lower retained AF/AFL failure than quality-score ranking in all five configurations; the H2-R interval included zero.
+**Within rhythms (panel a).** Confidence ranking lowered retained AF/AFL failure at matched counts in all five configurations. The H2-R interval included zero.
 
-**Under a shared budget (panel b).** The same ranking retained fewer reliable AF/AFL outputs and more reliable outputs overall, for every configuration at both operating points. Overall counts include AF/AFL.
+**Shared budget (panel b).** Confidence retained fewer reliable AF/AFL outputs but more reliable outputs overall, in every configuration at both operating points. Overall counts include AF/AFL.
 
-Points are configuration-level three-seed means of confidence minus quality. Whiskers are approximate simultaneous 95% subject-cluster bootstrap intervals within each contrast family (20,000 resamples). Per-contrast values are in [`results/published/`](results/published/README.md).
+Points show three-seed mean contrasts for each configuration (confidence minus quality). Whiskers show approximate simultaneous 95% subject-cluster bootstrap intervals within each family (20,000 resamples). [Aggregate results](results/published/README.md) provide the individual contrasts.
 
 <br clear="both">
 
 ## Coverage and failure by chart label
 
-Global ranking also redistributes coverage among other chart-labelled rhythms. On MIMIC TEST at 92.73% retention, for example, J2-RR confidence ranking retained 69% of windows labelled AFLT (atrial flutter) against 84% under quality ranking, but 98% of windows labelled STACH (sinus tachycardia) against 93%.
+Global ranking also redistributes coverage among other chart-labelled rhythms. Two examples from the coverage figure illustrate the difference:
+
+| Chart label | Confidence (%) | Quality score (%) |
+|---|---:|---:|
+| STACH: sinus tachycardia | 98 | 93 |
+| AFLT: atrial flutter | 69 | 84 |
+
+Values are J2-RR three-seed mean coverage, rounded as in the figure: MIMIC TEST, 92.73% overall retention. These are descriptive, developmental results, not independent confirmation.
 
 <img src="assets/label_coverage_heatmap.png" alt="Heatmap of window coverage by chart label under confidence, quality-score and binary-SQI ranking at three global operating points, with small-multiple curves of label coverage against overall retention on MIMIC TEST." width="100%">
 
-<sub>Window coverage by chart label under global ranking, J2-RR three-seed means. (A) Retention under confidence (C), quality score (Q) and binary SQI (S) at the development (87.93%) and TEST (92.73%, 87.93%) points; parentheses give development/TEST patient counts. (B) TEST label coverage against overall retention with all rhythms ranked together. The eight labels have at least 20 contributing TEST patients and exclude AF and exact SR. Labels are record-level chart annotations.</sub>
+<sub>Window coverage by chart label under global ranking, J2-RR three-seed means. (A) Retention under confidence (C), quality score (Q) and binary SQI (S) at the development (87.93%) and TEST (92.73%, 87.93%) points; parentheses give development/TEST patient counts. (B) TEST label coverage against overall retention with all rhythms ranked together. The eight labels have at least 20 contributing TEST patients and exclude AF and exact SR. Labels are record-level chart&nbsp;annotations.</sub>
 
 <img src="assets/label_failure_heatmap.png" alt="Heatmap of retained HR failure by chart label for confidence, quality-score and binary-SQI ranking at three global operating points, with small-multiple curves of retained failure against label coverage on MIMIC TEST." width="100%">
 
-<sub>Retained HR failure by chart label, J2-RR three-seed means. (A) Failure among retained windows for the same labels and operating points; colours are capped at 15% and printed values are uncapped. (B) TEST retained failure against label coverage along the global-budget trajectory; vertical scales differ. These MIMIC TEST analyses are developmental evidence.</sub>
+<sub>Retained HR failure by chart label, J2-RR three-seed means. (A) Failure among retained windows for the same labels and operating points; colours are capped at 15% and printed values are uncapped. (B) TEST retained failure against label coverage along the global-budget trajectory; vertical scales differ. These MIMIC TEST analyses are developmental&nbsp;evidence.</sub>
 
 ## Study design and evidence status
 
 The cohorts carry different evidential weight:
 
-| Evidence | Status |
+| Evidence | Interpretation |
 |---|---|
-| MIMIC TEST (Folds 8–9) | Examined during development: developmental evidence, not independent confirmation |
-| Additional VitalDB cohort: original confidence-versus-quality comparison | Evaluated under analysis rules frozen before waveform retrieval |
-| Alternative scores, two-stage policy and label-informed offsets | Exploratory: evaluated on cohorts that had already been examined |
+| MIMIC TEST, Folds 8–9 | Developmental; not independent confirmation |
+| Additional VitalDB cohort | Original comparison; rules frozen before waveform retrieval |
+| Later score adjustments | Exploratory; cohorts already examined |
+
+The last row covers alternative scores, the two-stage policy and label-informed offsets.
 
 <img src="assets/study_design.png" alt="Horizontal bar charts of MIMIC-III-Ext-PPG patient-disjoint partitions (training pool, development and MIMIC TEST) and of candidate versus reference-eligible 10-second windows." width="100%">
 
-<sub>MIMIC-III-Ext-PPG partitions. (a) Patient-disjoint record pools for training, development and MIMIC TEST. (b) Candidate and reference-eligible 10-second windows for HR training and testing.</sub>
+<sub>MIMIC-III-Ext-PPG partitions. (a) Patient-disjoint record pools for training, development and MIMIC TEST. (b) Candidate and reference-eligible 10-second windows for HR training and&nbsp;testing.</sub>
 
 ## Quick start
 
@@ -85,12 +94,12 @@ python examples/run_demo.py
 python -m unittest discover -s tests -v
 ```
 
-The demo writes two local files to `outputs/demo/`:
+The demo uses 12 synthetic units, two configurations, three paired seeds and 240 windows per fit. It writes two files to `outputs/demo/`:
 
 | File | Contents |
 |---|---|
-| `synthetic_predictions.csv` | Generated input: 12 synthetic units, two configurations, three paired seeds, 240 windows per fit |
-| `summary.json` | Endpoint contrasts, global reporting levels and bootstrap settings |
+| `synthetic_predictions.csv` | Generated test input |
+| `summary.json` | Contrasts, reporting levels and bootstrap settings |
 
 At 75% retention, the constructed example shows the direction of the allocation pattern: more reliable outputs overall but fewer reliable AF outputs under confidence than under quality ranking. It is a software demonstration, not patient data or a clinical effect size. Its 2,000-draw bootstrap is a short run, not the manuscript's inferential specification.
 
@@ -118,14 +127,20 @@ The [analysis contract](docs/analysis-contract.md) gives the full definitions.
 
 ## What is and is not released
 
-| Included | Not included |
+| Component | Available here |
 |---|---|
-| Matched-count top-k selection with deterministic tie handling | Model training and inference implementations |
-| Failure definition and subject-level contrast arithmetic | Model checkpoints, logits or prediction caches |
-| Fixed-set paired cluster bootstrap and family intervals | Raw or processed patient-level waveforms |
-| A local CSV analysis entry point and synthetic example | Restricted MIMIC files, identifiers or access credentials |
-| Two aggregate result tables and five rendered manuscript figures | Figure-generation and plotting scripts |
-| An official open-data download and schema-check example | The complete private research workspace or its history |
+| Selection | Matched-count top-k selection; stable tie handling |
+| Endpoints | Failure rules and subject-level contrasts |
+| Statistics | Paired fixed-set cluster bootstrap; family intervals |
+| Examples | Synthetic demo, CSV entry point and annotation downloader |
+| Results | Two aggregate tables and five manuscript figures |
+
+**Not released:**
+
+- Training, inference and plotting implementations.
+- Checkpoints, logits and prediction caches.
+- Raw or processed patient-level waveforms, restricted files, identifiers and credentials.
+- The complete private workspace and its history.
 
 The companion verifies the released computations; it does not train the five estimators or regenerate the manuscript's figures, tables or clinical results. Approved dataset access does not supply the withheld models or predictions, and no future release of withheld components is promised. See [provenance](docs/provenance.md) for the origin of each released file.
 
@@ -149,11 +164,13 @@ docs/                                  Data access, interpretation and provenanc
 
 This repository redistributes no original dataset. Each dataset is governed by its provider's terms for the exact version obtained; repository code permissions do not extend to third-party data.
 
-| Resource | Official record | Access | Role in the study |
-|---|---|---|---|
-| MIMIC-III-Ext-PPG 1.1.0 | [PhysioNet](https://physionet.org/content/mimic-iii-ext-ppg/1.1.0/) · [DOI](https://doi.org/10.13026/r6k1-xt76) | **Credentialed: required training and signed DUA** | Fitting, development and MIMIC evaluation |
-| VitalDB 1.0.0 | [PhysioNet](https://physionet.org/content/vitaldb/1.0.0/) · [DOI](https://doi.org/10.13026/czw8-9p62) | Open access under that version's CC BY 4.0 license | Waveforms for the additional cohort |
-| VitalDB Arrhythmia 1.0.0 | [PhysioNet](https://physionet.org/content/vitaldb-arrhythmia/1.0.0/) · [DOI](https://doi.org/10.13026/axd6-wm13) | Open access under CC BY 4.0 | Expert beat and rhythm annotations for the additional cohort |
+| Dataset and version | Study role | Access |
+|---|---|---|
+| [MIMIC-III-Ext-PPG](https://physionet.org/content/mimic-iii-ext-ppg/1.1.0/)<br>v1.1.0 · [DOI](https://doi.org/10.13026/r6k1-xt76) | Fitting, development and evaluation | Credentialed; training and signed DUA |
+| [VitalDB](https://physionet.org/content/vitaldb/1.0.0/)<br>v1.0.0 · [DOI](https://doi.org/10.13026/czw8-9p62) | Additional-cohort waveforms | Open; CC BY 4.0 |
+| [VitalDB Arrhythmia](https://physionet.org/content/vitaldb-arrhythmia/1.0.0/)<br>v1.0.0 · [DOI](https://doi.org/10.13026/axd6-wm13) | Expert beat and rhythm annotations | Open; CC BY 4.0 |
+
+Links point to the exact PhysioNet versions listed above. DUA means Data Use Agreement; access and licences apply to those versions only.
 
 **MIMIC access is personal.** Use your own PhysioNet account, complete the current credentialing and required training, and sign the Data Use Agreement. Keep records, identifiers, tokens and derived patient-level caches out of Git, issues and pull requests. This project neither automates approval nor asks for a password or token.
 

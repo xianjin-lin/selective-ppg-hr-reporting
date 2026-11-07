@@ -55,11 +55,11 @@ Values are J2-RR three-seed mean coverage, rounded as in the figure: MIMIC TEST,
 
 <img src="assets/label_coverage_heatmap.png" alt="Heatmap of window coverage by chart label under confidence, quality-score and binary-SQI ranking at three global operating points, with small-multiple curves of label coverage against overall retention on MIMIC TEST." width="100%">
 
-<sub>Window coverage by chart label under global ranking, J2-RR three-seed means. (A) Retention under confidence (C), quality score (Q) and binary SQI (S) at the development (87.93%) and TEST (92.73%, 87.93%) points; parentheses give development/TEST patient counts. (B) TEST label coverage against overall retention with all rhythms ranked together. The eight labels have at least 20 contributing TEST patients and exclude AF and exact SR. Labels are record-level chart annotations.</sub>
+<sub>Window coverage by chart label under global ranking, J2-RR three-seed means. (A) Retention under confidence (C), quality score (Q) and binary SQI (S) at the development (87.93%) and TEST (92.73%, 87.93%) points; parentheses give development/TEST patient counts. (B) TEST label coverage against overall retention with all rhythms ranked together. The eight labels have at least 20 contributing TEST patients and exclude AF and exact SR. Labels are record-level chart&nbsp;annotations.</sub>
 
 <img src="assets/label_failure_heatmap.png" alt="Heatmap of retained HR failure by chart label for confidence, quality-score and binary-SQI ranking at three global operating points, with small-multiple curves of retained failure against label coverage on MIMIC TEST." width="100%">
 
-<sub>Retained HR failure by chart label, J2-RR three-seed means. (A) Failure among retained windows for the same labels and operating points; colours are capped at 15% and printed values are uncapped. (B) TEST retained failure against label coverage along the global-budget trajectory; vertical scales differ. These MIMIC TEST analyses are developmental evidence.</sub>
+<sub>Retained HR failure by chart label, J2-RR three-seed means. (A) Failure among retained windows for the same labels and operating points; colours are capped at 15% and printed values are uncapped. (B) TEST retained failure against label coverage along the global-budget trajectory; vertical scales differ. These MIMIC TEST analyses are developmental&nbsp;evidence.</sub>
 
 ## Study design and evidence status
 
@@ -75,7 +75,7 @@ The last row covers alternative scores, the two-stage policy and label-informed 
 
 <img src="assets/study_design.png" alt="Horizontal bar charts of MIMIC-III-Ext-PPG patient-disjoint partitions (training pool, development and MIMIC TEST) and of candidate versus reference-eligible 10-second windows." width="100%">
 
-<sub>MIMIC-III-Ext-PPG partitions. (a) Patient-disjoint record pools for training, development and MIMIC TEST. (b) Candidate and reference-eligible 10-second windows for HR training and testing.</sub>
+<sub>MIMIC-III-Ext-PPG partitions. (a) Patient-disjoint record pools for training, development and MIMIC TEST. (b) Candidate and reference-eligible 10-second windows for HR training and&nbsp;testing.</sub>
 
 ## Quick start
 

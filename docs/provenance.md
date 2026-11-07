@@ -29,6 +29,12 @@ The repository includes rendered PNGs of selected study figures only:
 - `external_evaluation.png`: additional VitalDB retention/allocation figure;
 - `allocation_tradeoff.png`: allocation-trade-off figure, with editorial
   inset/leader placement improvements and unchanged plotted data coordinates.
+- `label_coverage_heatmap.png`: window coverage by chart label on MIMIC TEST
+  (manuscript Fig. 5), rasterized from the manuscript PDF without editing;
+- `label_failure_heatmap.png`: retained HR failure by chart label on MIMIC TEST
+  (manuscript Fig. 6), rasterized from the manuscript PDF without editing.
+
+`logo.svg` is a decorative README icon, not a study figure or data.
 
 No waveform example, plotting source, vector editing script or figure-generation
 code is included. The rendering assets are explanatory manuscript material,

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+<title id="t">Selective PPG heart-rate reporting</title>
+<defs>
+<linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#2E8B73"/>
+<stop offset="1" stop-color="#17594A"/>
+</linearGradient>
+</defs>
+<style>
+.trace{fill:none;stroke:#FFFFFF;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.ghost{opacity:.28}
+.draw{stroke-dasharray:100 100;stroke-dashoffset:100;animation:draw 3.2s linear infinite}
+@keyframes draw{0%{stroke-dashoffset:100;opacity:1}60%{stroke-dashoffset:0;opacity:1}85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@media (prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}.dot{display:none}}
+</style>
+<rect x="2" y="2" width="60" height="60" rx="15" fill="url(#tile)"/>
+<rect x="2.5" y="2.5" width="59" height="59" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity=".2"/>
+<g transform="translate(32 33) scale(0.8) translate(-32 -30)">
+<path class="trace ghost" d="M4 42H8C11 42 12 18 15 18C18 18 19 30 21 31C22 31.5 23 28 25 28C27 28 29 42 32 42C35 42 36 18 39 18C42 18 43 30 45 31C46 31.5 47 28 49 28C51 28 53 42 56 42H60"/>
+<path id="pulse" class="trace draw" pathLength="100" d="M4 42H8C11 42 12 18 15 18C18 18 19 30 21 31C22 31.5 23 28 25 28C27 28 29 42 32 42C35 42 36 18 39 18C42 18 43 30 45 31C46 31.5 47 28 49 28C51 28 53 42 56 42H60"/>
+<g class="dot">
+<circle r="4.6" fill="#FFD166" stroke="#17594A" stroke-width="1.6">
+<animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.6;1" calcMode="linear"><mpath href="#pulse"/></animateMotion>
+<animate attributeName="opacity" values="1;1;1;0" keyTimes="0;0.6;0.85;1" dur="3.2s" repeatCount="indefinite"/>
+</circle>
+</g>
+</g>
+</svg>

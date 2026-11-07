@@ -16,8 +16,6 @@
 
 <sub>Allocation trade-offs relative to confidence ranking at matched global counts. Top: MIMIC TEST (chart-defined AF); bottom: additional VitalDB cohort (AF/AFL); left: 92.73% and right: 87.93% retention. Markers are descriptive configuration-level three-seed means of exploratory alternative scores, not patients or confidence intervals. Grey label-informed AF-offset curves (−2 to +2 development SDs) are diagnostics, not deployable rhythm-blind corrections. Quality-score results lie off-scale.</sub>
 
-**Start with:** [The three quantities](#research-question) · [VitalDB evidence](#key-evidence) · [Chart-label heatmaps](#coverage-and-failure-by-chart-label) · [Run the demo](#quick-start) · [Release scope](#what-is-and-is-not-released)
-
 ## Research question
 
 Selective reporting is assessed along three distinct quantities:
@@ -34,7 +32,9 @@ A failure is a missing or non-finite estimate, or an absolute error **above 5 bp
 
 In the additional VitalDB cohort (352 patients), confidence ranking had lower retained AF/AFL failure than quality-score ranking at matched within-rhythm counts in all five configurations; the H2-R interval included zero. Under a shared global budget, the same ranking retained fewer reliable AF/AFL outputs and more reliable outputs overall, for every configuration at both operating points. Per-contrast values are in [`results/published/`](results/published/README.md).
 
-<p align="center"><img src="assets/external_evaluation.png" width="595" alt="Interval plots of confidence-minus-quality differences in the additional VitalDB cohort for five configurations: within-rhythm failure differences for AF/AFL and NSR, and global reliable-output differences for AF/AFL and overall at 92.73% and 87.93% retention."></p>
+<p align="center"><a href="assets/external_evaluation.png"><img src="assets/external_evaluation.png" width="420" alt="Interval plots of confidence-minus-quality differences in the additional VitalDB cohort for five configurations: within-rhythm failure differences for AF/AFL and NSR, and global reliable-output differences for AF/AFL and overall at 92.73% and 87.93% retention."></a></p>
+
+<p align="center"><sub><a href="assets/external_evaluation.png">View full-resolution figure</a></sub></p>
 
 <sub>Confidence minus quality in the additional VitalDB cohort. (a) Retained failure after within-rhythm selection. (b) Reliable-output differences after global selection; overall counts include AF/AFL. Points are configuration-level three-seed means; whiskers are approximate simultaneous 95% subject-cluster bootstrap intervals within each contrast family (20,000 resamples).</sub>
 

@@ -28,6 +28,14 @@ Selective reporting is assessed along three distinct quantities:
 
 A failure is a missing or non-finite estimate, or an absolute error **above 5 bpm** against the ECG-derived reference; exactly 5 bpm is not a failure. Reference eligibility is applied separately. Matched-count selection within a rhythm measures accuracy; global ranking against one budget measures allocation.
 
+### Animated walk-through (synthetic data)
+
+Synthetic example from `examples/run_demo.py` (demo-A, seed 0; 72 AF and 168 sinus-rhythm windows). It illustrates the selection process and contains no patient data or study results.
+
+<img src="assets/within_vs_shared.gif" width="100%" alt="Animation of 72 synthetic AF windows under confidence and quality-score ranking. With 36 AF windows reported by each, confidence keeps 0 failed estimates against 9; under a shared 75% budget of all 240 windows, confidence reports 12 reliable AF outputs against 39.">
+
+<img src="assets/ranking_budget.gif" width="100%" alt="Animation of 240 synthetic windows re-ordered by confidence and by quality score, then cut at a 75% budget line. Confidence ranks sinus-rhythm windows first and reports 12 of 72 AF windows; quality-score ranking reports 53.">
+
 ## Key evidence
 
 <img src="assets/external_evaluation.png" align="right" width="400" alt="Interval plots of confidence-minus-quality differences in the additional VitalDB cohort for five configurations: within-rhythm failure differences for AF/AFL and NSR, and global reliable-output differences for AF/AFL and overall at 92.73% and 87.93% retention.">
@@ -103,6 +111,10 @@ The demo uses 12 synthetic units, two configurations, three paired seeds and 240
 
 At 75% retention, the constructed example shows the direction of the allocation pattern: more reliable outputs overall but fewer reliable AF outputs under confidence than under quality ranking. It is a software demonstration, not patient data or a clinical effect size. Its 2,000-draw bootstrap is a short run, not the manuscript's inferential specification.
 
+<img src="assets/retention_sweep.gif" width="100%" alt="Animation of the synthetic demo as the reported fraction falls from 100% to 40%, tracing retained failure, overall reliable outputs and reliable AF outputs for confidence and quality-score ranking.">
+
+<sub>Synthetic budget sweep, not interpolation of the study's two global operating points.</sub>
+
 <details>
 <summary><strong>Analyze local predictions</strong></summary>
 
@@ -134,6 +146,7 @@ The [analysis contract](docs/analysis-contract.md) gives the full definitions.
 | Statistics | Paired fixed-set cluster bootstrap; family intervals |
 | Examples | Synthetic demo, CSV entry point and annotation downloader |
 | Results | Two aggregate tables and five manuscript figures |
+| Animations | Three synthetic method demonstrations |
 
 **Not released:**
 
@@ -154,7 +167,7 @@ examples/run_demo.py                   Reproducible synthetic case
 examples/download_open_annotations.py  Official open-data access example
 tests/test_analysis.py                 CPU-only regression checks
 results/published/                     Aggregate manuscript result snapshots
-assets/                                Rendered figures and logo, no plotting sources
+assets/                                Figures, demo animations and logo; no plotting code
 docs/                                  Data access, interpretation and provenance
 ```
 

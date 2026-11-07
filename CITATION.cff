@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the software version used, the associated manuscript when available, and the original dataset providers."
+type: software
+title: "Selective PPG-based heart-rate reporting: Analysis companion"
+version: 0.1.0
+date-released: 2026-11-07
+repository-code: "https://github.com/xianjin-lin/selective-ppg-hr-reporting"
+url: "https://github.com/xianjin-lin/selective-ppg-hr-reporting"
+authors:
+  - family-names: Lin
+    given-names: Xianjin
+    orcid: "https://orcid.org/0009-0002-4046-7302"
+  - family-names: Yu
+    given-names: Liyang
+    orcid: "https://orcid.org/0000-0003-2353-8615"
+  - family-names: Luo
+    given-names: Zhonglou
+  - family-names: Tian
+    given-names: Rui
+  - family-names: Ding
+    given-names: Wangcai
+    orcid: "https://orcid.org/0000-0001-8932-6792"
+abstract: "A partial analysis release for distinguishing within-rhythm HR selection from rhythm allocation under shared retention budgets. Includes CPU-only synthetic examples, fixed-set cluster bootstrap routines, aggregate result snapshots and official data-access guidance. No patient-level data or plotting code are redistributed."
+keywords:
+  - photoplethysmography
+  - heart-rate estimation
+  - selective reporting
+  - atrial fibrillation
+  - reproducibility

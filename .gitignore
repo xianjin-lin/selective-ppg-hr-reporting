@@ -1,0 +1,26 @@
+# Local inputs and generated outputs are never part of this release.
+/data/
+/outputs/
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.pkl
+*.pickle
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.vital
+*.parquet
+*.dat
+*.hea
+*.log

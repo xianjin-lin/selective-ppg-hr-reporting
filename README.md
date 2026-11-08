@@ -10,8 +10,8 @@
 
 <table align="center">
 <tr>
-<td width="46%"><a href="https://xianjin-lin.github.io/selective-ppg-hr-reporting/"><img src="assets/project_page_preview.png" width="100%" alt="Preview of the interactive project page: synthetic AF and sinus-rhythm windows split by a draggable divider, with confidence ranking on the left and quality-score ranking on the right."></a></td>
-<td><strong>Interactive project page</strong><br>Drag to compare confidence and quality-score ranking, highlight where their selections differ, and sweep the reporting budget.<br><sub>Synthetic demonstration in the browser · manuscript figures alongside</sub><br><br><a href="https://xianjin-lin.github.io/selective-ppg-hr-reporting/"><strong>Open the project page →</strong></a></td>
+<td><a href="https://xianjin-lin.github.io/selective-ppg-hr-reporting/"><img src="assets/project_page_card.png" width="260" alt="Selection Explorer: interactive project page"></a></td>
+<td><strong>Interactive project page.</strong><br>Drag to compare the two rankings on a synthetic example.</td>
 </tr>
 </table>
 
@@ -176,7 +176,7 @@ examples/run_demo.py                   Reproducible synthetic case
 examples/download_open_annotations.py  Official open-data access example
 tests/test_analysis.py                 CPU-only regression checks
 results/published/                     Aggregate manuscript result snapshots
-assets/                                Figures, demo animations, page preview and logo; no plotting code
+assets/                                Figures, demo animations, page card, preview and logo; no plotting code
 site/index.html                        Self-contained interactive project page (GitHub Pages)
 docs/                                  Data access, interpretation and provenance
 ```

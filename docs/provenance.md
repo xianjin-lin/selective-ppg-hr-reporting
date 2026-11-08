@@ -42,6 +42,15 @@ patient data or study results.
 
 `logo.svg` is a decorative README icon, not a study figure or data.
 
+`site/index.html` is the interactive project page, published with GitHub Pages
+by `.github/workflows/pages.yml` at <https://xianjin-lin.github.io/selective-ppg-hr-reporting/>. It is a single self-contained file:
+its browser script embeds the same synthetic demo-A, seed-0 windows, reproduces
+the `k_of`, `retained` and `failure` rules of `analysis_core.py`, and draws only
+that synthetic example. Manuscript figures appear on the page as the rendered
+PNG files listed above; the script does not generate them. `project_page_preview.png`
+is a screenshot of the page used as its social preview, and
+`project_page_card.png` is the README link card; neither is a study figure or data.
+
 No waveform example, plotting source, vector editing script or figure-generation
 code is included. The rendering assets are explanatory manuscript material,
 not numerical inputs to the demo.

@@ -4,7 +4,7 @@
 
 <p align="center"><a href="https://orcid.org/0009-0002-4046-7302">Xianjin Lin</a><sup>1</sup> · <a href="https://orcid.org/0000-0003-2353-8615">Liyang Yu</a><sup>1†</sup> · Zhonglou Luo<sup>1</sup> · Rui Tian<sup>1</sup> · <a href="https://orcid.org/0000-0001-8932-6792">Wangcai Ding</a><sup>2,3</sup><br><sub><sup>1</sup>Qinghai University · <sup>2</sup>Lanzhou Jiaotong University · <sup>3</sup>Xi'an Traffic Engineering Institute · † Corresponding author</sub></p>
 
-<p align="center"><a href="#key-evidence">Key evidence</a> · <a href="#coverage-and-failure-by-chart-label">Heatmaps</a> · <a href="#quick-start">Quick start</a> · <a href="docs/analysis-contract.md">Analysis contract</a> · <a href="#data-access-and-permissions">Data access</a> · <a href="#citation">Citation</a></p>
+<p align="center"><a href="#key-evidence">Key&nbsp;evidence</a> · <a href="#animated-walk-through-synthetic-data">Animations</a> · <a href="#coverage-and-failure-by-chart-label">Heatmaps</a> · <a href="#quick-start">Quick&nbsp;start</a><br><a href="docs/analysis-contract.md">Analysis&nbsp;contract</a> · <a href="https://github.com/xianjin-lin/selective-ppg-hr-reporting/releases/tag/v0.1.0">v0.1.0&nbsp;release</a> · <a href="#data-access-and-permissions">Data&nbsp;access</a> · <a href="#citation">Citation</a></p>
 
 <p align="center"><a href="https://github.com/xianjin-lin/selective-ppg-hr-reporting/actions/workflows/checks.yml"><img src="https://github.com/xianjin-lin/selective-ppg-hr-reporting/actions/workflows/checks.yml/badge.svg" alt="Analysis checks"></a></p>
 
@@ -92,6 +92,7 @@ The data-free example needs Python 3.11 or newer and NumPy only: no PyTorch, GPU
 ```bash
 git clone https://github.com/xianjin-lin/selective-ppg-hr-reporting.git
 cd selective-ppg-hr-reporting
+git checkout v0.1.0             # Fixed snapshot linked in the submitted manuscript
 python -m venv .venv
 source .venv/bin/activate        # Windows PowerShell: .\.venv\Scripts\Activate.ps1
 ```
@@ -200,6 +201,8 @@ python examples/download_open_annotations.py
 ## Citation
 
 **Manuscript:** *Selective PPG-based heart-rate reporting: Separating within-rhythm accuracy from reliable-output yield.* No journal acceptance or publication DOI is claimed.
+
+**Submitted snapshot:** [v0.1.0](https://github.com/xianjin-lin/selective-ppg-hr-reporting/releases/tag/v0.1.0), at commit [`ca8c247`](https://github.com/xianjin-lin/selective-ppg-hr-reporting/tree/ca8c2475278ebf7634ab4d00901aedf228939847). Use this version for the analysis companion associated with the manuscript submission.
 
 **Software:** cite this companion using [CITATION.cff](CITATION.cff) (GitHub's *Cite this repository* button), and cite the [original dataset providers](docs/data-access.md#provider-citations) when using their data.
 

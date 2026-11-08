@@ -4,9 +4,16 @@
 
 <p align="center"><a href="https://orcid.org/0009-0002-4046-7302">Xianjin Lin</a><sup>1</sup> · <a href="https://orcid.org/0000-0003-2353-8615">Liyang Yu</a><sup>1†</sup> · Zhonglou Luo<sup>1</sup> · Rui Tian<sup>1</sup> · <a href="https://orcid.org/0000-0001-8932-6792">Wangcai Ding</a><sup>2,3</sup><br><sub><sup>1</sup>Qinghai University · <sup>2</sup>Lanzhou Jiaotong University · <sup>3</sup>Xi'an Traffic Engineering Institute · † Corresponding author</sub></p>
 
-<p align="center"><a href="#key-evidence">Key&nbsp;evidence</a> · <a href="#animated-walk-through-synthetic-data">Animations</a> · <a href="#coverage-and-failure-by-chart-label">Heatmaps</a> · <a href="#quick-start">Quick&nbsp;start</a><br><a href="docs/analysis-contract.md">Analysis&nbsp;contract</a> · <a href="https://github.com/xianjin-lin/selective-ppg-hr-reporting/releases/tag/v0.1.0">v0.1.0&nbsp;release</a> · <a href="#data-access-and-permissions">Data&nbsp;access</a> · <a href="#citation">Citation</a></p>
+<p align="center"><a href="https://xianjin-lin.github.io/selective-ppg-hr-reporting/"><strong>Project&nbsp;page</strong></a> · <a href="#key-evidence">Key&nbsp;evidence</a> · <a href="#animated-walk-through-synthetic-data">Animations</a> · <a href="#coverage-and-failure-by-chart-label">Heatmaps</a> · <a href="#quick-start">Quick&nbsp;start</a><br><a href="docs/analysis-contract.md">Analysis&nbsp;contract</a> · <a href="https://github.com/xianjin-lin/selective-ppg-hr-reporting/releases/tag/v0.1.0">v0.1.0&nbsp;release</a> · <a href="#data-access-and-permissions">Data&nbsp;access</a> · <a href="#citation">Citation</a></p>
 
 <p align="center"><a href="https://github.com/xianjin-lin/selective-ppg-hr-reporting/actions/workflows/checks.yml"><img src="https://github.com/xianjin-lin/selective-ppg-hr-reporting/actions/workflows/checks.yml/badge.svg" alt="Analysis checks"></a></p>
+
+<table align="center">
+<tr>
+<td width="46%"><a href="https://xianjin-lin.github.io/selective-ppg-hr-reporting/"><img src="assets/project_page_preview.png" width="100%" alt="Preview of the interactive project page: synthetic AF and sinus-rhythm windows split by a draggable divider, with confidence ranking on the left and quality-score ranking on the right."></a></td>
+<td><strong>Interactive project page</strong><br>Drag to compare confidence and quality-score ranking, highlight where their selections differ, and sweep the reporting budget.<br><sub>Synthetic demonstration in the browser · manuscript figures alongside</sub><br><br><a href="https://xianjin-lin.github.io/selective-ppg-hr-reporting/"><strong>Open the project page →</strong></a></td>
+</tr>
+</table>
 
 <blockquote>
 <p><sub><strong>Summary.</strong> Selecting accurate heart-rate (HR) estimates within a cardiac rhythm is not the same as allocating a shared reporting budget across rhythms: a score can retain fewer failures within atrial fibrillation (AF) yet retain fewer reliable AF outputs under global ranking. The study compares confidence- and quality-based selection of fixed 10-second PPG HR predictions from five supervised configurations, using MIMIC-III-Ext-PPG and an additional rhythm-annotated VitalDB cohort. This repository is a partial analysis companion: it publishes the selection and statistical routines, a data-free CPU example, aggregate results and rendered manuscript figures, but not the models, predictions or patient-level data.</sub></p>
@@ -148,6 +155,7 @@ The [analysis contract](docs/analysis-contract.md) gives the full definitions.
 | Examples | Synthetic demo, CSV entry point and annotation downloader |
 | Results | Two aggregate tables and five manuscript figures |
 | Animations | Three synthetic method demonstrations |
+| Project page | [Interactive synthetic demonstration](https://xianjin-lin.github.io/selective-ppg-hr-reporting/) (`site/index.html`) |
 
 **Not released:**
 
@@ -168,7 +176,8 @@ examples/run_demo.py                   Reproducible synthetic case
 examples/download_open_annotations.py  Official open-data access example
 tests/test_analysis.py                 CPU-only regression checks
 results/published/                     Aggregate manuscript result snapshots
-assets/                                Figures, demo animations and logo; no plotting code
+assets/                                Figures, demo animations, page preview and logo; no plotting code
+site/index.html                        Self-contained interactive project page (GitHub Pages)
 docs/                                  Data access, interpretation and provenance
 ```
 
